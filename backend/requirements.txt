@@ -1,6 +1,9 @@
-Django==5.2.9
-djangorestframework==3.15.2
-djangorestframework-simplejwt==5.3.1
+# Security: Django 5.0 is end-of-life and 5.0.9 has CRITICAL/HIGH CVEs
+# (e.g. CVE-2025-64459, CVE-2025-57833). Track the 5.2 LTS patch series.
+# DRF 3.15.2 has HIGH CVEs (CVE-2026-114136/114137/114138).
+Django>=5.2.8,<5.3
+djangorestframework>=3.16.1,<4.0
+djangorestframework-simplejwt>=5.5.1,<6.0
 psycopg2-binary==2.9.9
 django-cors-headers==4.4.0
 django-filter==24.3
@@ -10,5 +13,5 @@ gunicorn==23.0.0
 
 # dev/test only (fine to keep in the single requirements file for this
 # demo app; split into base/dev/prod requirement files if this grows)
-pytest==8.3.3
-pytest-django==4.9.0
+pytest>=8.4.2,<9.0
+pytest-django>=4.11.1,<5.0
